@@ -1,0 +1,17 @@
+{    "pipeline": [
+    { 
+        "bounds": "([-11723049.961878527,-11556449.59447259],[4307643.841235159,4386586.784559818])",
+        "http://usgs-lidar-public.s3.amazonaws.com/USGS_LPC_NM_NorthCentral_B3_2017_LAS_2018/ept.json":
+        "http://usgs-lidar-public.s3.amazonaws.com/NM_Northeast_B3_2018/ept.json",
+        "type": "readers.ept"
+    },
+    {
+        "type": "filters.merge"
+    },
+    {   
+        "type":"filters.range","limits":"Classification[2:2]"
+    },
+    "merged_files.laz"
+]
+}
+

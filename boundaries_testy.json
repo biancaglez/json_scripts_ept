@@ -1,0 +1,1 @@
+{"pipeline":[{"type":"readers.ept","filename":"http://usgs-lidar-public.s3.amazonaws.com/USGS_LPC_NM_NorthCentral_B3_2017_LAS_2018/ept.json","bounds":"([-11715555.653218392,-11665728.258868974],[4323315.156649154,4347873.957852713])"},"output.las"]}

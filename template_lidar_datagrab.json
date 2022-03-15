@@ -1,0 +1,10 @@
+{
+    "pipeline":[
+        {
+            "type":"readers.ept",
+            "filename":"http://usgs-lidar-public.s3.amazonaws.com/NM_Northeast_B3_2018/ept.json",
+            "bounds":"([-11698260.5899822,-11653790.468462806],[4314964.12355889,4330097.934547165])"
+        },                      
+            {"type":"filters.range","limits":"Classification[2:2]"},
+            "V:/Field/B_Gonzalez/scripts/script_output/ept_ground_2.las"]
+            }

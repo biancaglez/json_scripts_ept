@@ -1,0 +1,30 @@
+{
+    "pipeline": [
+        {
+"bounds": "([-11696559.6798, -11685361.6552], [4337009.9122, 4348700.0074])",
+"filename": "http://usgs-lidar-public.s3.amazonaws.com/USGS_LPC_NM_NorthCentral_B3_2017_LAS_2018/ept.json",
+"type": "readers.ept",
+"tag": "readdata"
+        },
+        {
+            "out_srs": "EPSG:26915",
+            "tag": "reprojectUTM",
+            "type": "filters.reprojection"
+        },
+        {
+            "tag": "groundify",
+            "type": "filters.smrf"
+        },
+        {
+            "limits": "Classification[2:2]",
+            "type": "filters.range",
+            "tag": "classify"
+        },
+        {
+            "filename": "V:/Field/B_Gonzalez/scripts/script_output/exampleLAZ.las",
+            "inputs": [ "classify" ],
+            "tag": "writerslas",
+            "type": "writers.las"
+        }
+    ]
+}
