@@ -21,14 +21,13 @@
             "tag": "classify"
         },
         {
-            "filename": "V:/Field/B_Gonzalez/scripts/script_output/B3_LPC_NC_2018_2017.las",
+            "filename": "V:/Field/B_Gonzalez/scripts/script_output/B3_LPC_NC_2018_2017.laz",
             "inputs": [ "classify" ],
             "tag": "writerslas",
             "type": "writers.las"
-        }
+        },
         {
-        
-            "filename": "B3_LPC_NC_2018_2017.tif",
+            "filename": "V:/Field/B_Gonzalez/scripts/script_output/B3_LPC_NC_2018_2017.tif",
             "gdalopts": "tiled=yes,     compress=deflate",
             "inputs": [ "writerslas" ],
             "nodata": -9999,
